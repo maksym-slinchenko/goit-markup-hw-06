@@ -624,7 +624,6 @@ footer .logo-seconf-half {
 /* Форма заказа услуг*/
 .order-form {
   display: flex;
-  flex-direction: column;
   width: 528px;
   margin-left: auto;
   margin-right: auto;
@@ -633,6 +632,39 @@ footer .logo-seconf-half {
     0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
 }
+.container-order-form {
+  margin: 40px;
+}
+.ofer-to-left-data {
+  display: inline-block;
+  margin-bottom: 30px;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+}
+.customer-name,
+.customer-tel,
+.customer-mail {
+  margin-bottom: 28px;
+}
+
+.form-comments {
+  margin-bottom: 20px;
+  height: 120px;
+  resize: none;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+}
+.policy-agreement {
+  margin-bottom: 30px;
+}
+.agreement-conditions {
+  text-decoration: underline;
+}
+
 /* Основная секция портфолио */
 .main-section {
   display: flex;
