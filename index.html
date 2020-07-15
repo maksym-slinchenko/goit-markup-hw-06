@@ -430,7 +430,7 @@
     </footer>
     <form class="order-form">
       <div class="cross-container">
-        <svg class="cross-icon" width=11 height=11>
+        <svg width=11 height=11>
         <use href=./images/symbol-defs.svg#cross></use>
         </svg>
       </div>
@@ -438,27 +438,42 @@
         <b class="ofer-to-left-data">
           Оставьте свои данные, мы вам перезвоним
         </b>
-        <label
-          >Имя
-          <input class="customer-name" type="text" name="customer-name" />
-        </label>
-        <label
-          >Телефон
-          <input class="customer-tel" type="tel" name="customer-tel" />
-        </label>
-        <label
-          >Почта
-          <input class="customer-mail" type="email" name="customer-mail" />
-        </label>
-        <label
-          >Комментарий
-          <textarea
-            class="form-comments"
-            name="comment"
-            cols="30"
-            rows="10"
-          ></textarea>
-        </label>
+        <div class="customer-name-container">
+          
+          <label class="name-label">
+            <input class="customer-name" type="text" name="customer-name" placeholder=" " />
+            <span class="form-label">Имя</span>
+            <svg class="name-icon" width=18px height=18px>
+              <use href=./images/symbol-defs.svg#person-black-18dp-1></use>
+            </svg>
+                      </label>
+        </div>
+        <div class="customer-tel-container">
+          
+          <label>
+            <input class="customer-tel" type="tel" name="customer-tel" placeholder=" " />
+            <span class="tel-label">Телефон</span>
+            <svg class="tel-icon" width=18px height=18px>
+              <use href=./images/symbol-defs.svg#phone-black-18dp-1></use>
+            </svg>
+          </label>
+        </div>
+        <div class="customer-mail-container">
+          
+          <label>
+            <input class="customer-mail" type="email" name="customer-mail" placeholder=" " />
+            <span class="mail-label">Почта</span>
+            <svg class="mail-icon" width=18px height=18px>
+              <use href=./images/symbol-defs.svg#email-black-18dp-1></use>
+            </svg>
+          </label>
+        </div>
+        <div class="comments-container">
+          <label>
+            <textarea class="form-comments" name="comment" cols="30" rows="10" placeholder=" "></textarea>
+            <span class="comments-label">Комментарий</span>
+          </label>
+        </div>
         <div class="policy-agreement">
           <input type="checkbox" name="policy" id="policy" />
           <label for="policy">Соглашаюсь с рассылкой и принимаю </label>

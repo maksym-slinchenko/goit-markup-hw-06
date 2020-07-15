@@ -622,7 +622,10 @@ footer .logo-seconf-half {
   color: rgba(255, 255, 255, 0.4);
 }
 /* Форма заказа услуг*/
+
 .order-form {
+  position: absolute;
+  bottom: 221px;
   position: relative;
   display: flex;
   width: 528px;
@@ -632,6 +635,7 @@ footer .logo-seconf-half {
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+  border: 5px solid red;
 }
 .cross-container {
   position: absolute;
@@ -653,34 +657,134 @@ footer .logo-seconf-half {
   align-items: center;
   margin: 40px;
 }
+
 .ofer-to-left-data {
   display: inline-block;
   margin-bottom: 30px;
   font-size: 20px;
-  line-height: 23px;
+  line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
 }
+.container-order-form input textarea {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+}
+.customer-name-container,
+.customer-tel-container,
+.customer-mail-container {
+  margin-bottom: 28px;
+  position: relative;
+}
 .customer-name,
 .customer-tel,
 .customer-mail {
-  margin-bottom: 28px;
+  text-indent: 40px;
   height: 40px;
   min-width: 448px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
 }
 
+.customer-name:hover ~ .form-label,
+.customer-name:focus ~ .form-label,
+.customer-name:not(:placeholder-shown) ~ .form-label {
+  color: var(--accent-text-color);
+  top: -16px;
+  left: 16px;
+}
+.customer-name:hover ~ .name-icon,
+.customer-name:focus ~ .name-icon {
+  fill: var(--accent-text-color);
+}
+.customer-name:focus,
+.customer-name:hover {
+  border-color: var(--accent-text-color);
+  outline: none;
+  cursor: pointer;
+}
+.customer-tel:hover ~ .tel-label,
+.customer-tel:focus ~ .tel-label,
+.customer-tel:not(:placeholder-shown) ~ .tel-label {
+  color: var(--accent-text-color);
+  top: -16px;
+  left: 16px;
+}
+.customer-tel:hover ~ .tel-icon,
+.customer-tel:focus ~ .tel-icon {
+  fill: var(--accent-text-color);
+}
+
+.customer-mail:hover ~ .mail-label,
+.customer-mail:focus ~ .mail-label,
+.customer-mail:not(:placeholder-shown) ~ .mail-label {
+  color: var(--accent-text-color);
+  top: -16px;
+  left: 16px;
+}
+.customer-mail:hover ~ .mail-icon,
+.customer-mail:focus ~ .mail-icon {
+  fill: var(--accent-text-color);
+}
+
+.form-label,
+.tel-label,
+.mail-label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 42px;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: #757575;
+}
+.name-icon,
+.tel-icon,
+.mail-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 16px;
+}
 .form-comments {
   margin-bottom: 20px;
   height: 120px;
   min-width: 448px;
   resize: none;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14;
   letter-spacing: 0.01em;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
 }
-.policy-agreement {
+
+.form-comments:focus ~ .comments-label,
+.form-comments:hover ~ .comments-label,
+.form-comments:not(:placeholder-shown) ~ .comments-label {
+  color: var(--accent-text-color);
+  top: -16px;
+  left: 16px;
+}
+.comments-container {
+  position: relative;
+}
+.comments-label {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: #757575;
+}
+.comm .policy-agreement {
   margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
 }
 .agreement-conditions {
   text-decoration: underline;
