@@ -623,6 +623,7 @@ footer .logo-seconf-half {
 }
 /* Форма заказа услуг*/
 .order-form {
+  position: relative;
   display: flex;
   width: 528px;
   margin-left: auto;
@@ -631,6 +632,20 @@ footer .logo-seconf-half {
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+}
+.cross-container {
+  position: absolute;
+  right: -9px;
+  top: -9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--secondary-text-color);
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
 }
 .container-order-form {
   display: flex;

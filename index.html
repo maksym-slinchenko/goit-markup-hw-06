@@ -429,46 +429,36 @@
       </div>
     </footer>
     <form class="order-form">
+      <div class="cross-container">
+        <svg class="cross-icon" width=11 height=11>
+        <use href=./images/symbol-defs.svg#cross></use>
+        </svg>
+      </div>
       <div class="container-order-form">
         <b class="ofer-to-left-data">
           Оставьте свои данные, мы вам перезвоним
         </b>
-        <div>
-          <label for="customer-name">Имя</label>
-          <input
-            class="customer-name"
-            type="text"
-            name="customer-name"
-            id="customer-name"
-          />
-        </div>
-        <div>
-          <label for="customer-tel">Телефон</label>
-          <input
-            class="customer-tel"
-            type="tel"
-            name="customer-tel"
-            id="customer-tel"
-          />
-        </div>
-
-        <div>
-          <label for="customer-mail">Почта</label>
-          <input
-            class="customer-mail"
-            type="email"
-            name="customer-mail"
-            id="customer-mail"
-          />
-        </div>
-        <label for="comment">Комментарий</label>
-        <textarea
-          class="form-comments"
-          name="comment"
-          id="comment"
-          cols="30"
-          rows="10"
-        ></textarea>
+        <label
+          >Имя
+          <input class="customer-name" type="text" name="customer-name" />
+        </label>
+        <label
+          >Телефон
+          <input class="customer-tel" type="tel" name="customer-tel" />
+        </label>
+        <label
+          >Почта
+          <input class="customer-mail" type="email" name="customer-mail" />
+        </label>
+        <label
+          >Комментарий
+          <textarea
+            class="form-comments"
+            name="comment"
+            cols="30"
+            rows="10"
+          ></textarea>
+        </label>
         <div class="policy-agreement">
           <input type="checkbox" name="policy" id="policy" />
           <label for="policy">Соглашаюсь с рассылкой и принимаю </label>
