@@ -622,26 +622,54 @@ footer .logo-seconf-half {
   color: rgba(255, 255, 255, 0.4);
 }
 /* Форма заказа услуг*/
-.
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.15);
+  opacity: 1;
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
 
 .order-form {
   position: absolute;
-  bottom: 221px;
-  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
+  max-height: calc(100% - 30px);
+  overflow-y: auto;
+  overflow-x: hidden;
   width: 528px;
-  margin-left: auto;
-  margin-right: auto;
   background-color: var(--secondary-text-color);
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-  border: 5px solid red;
+  animation: form-animate 1000ms;
 }
+
+@keyframes form-animate {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .cross-container {
   position: absolute;
-  right: -9px;
-  top: -9px;
+  right: 8px;
+  top: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -653,11 +681,7 @@ footer .logo-seconf-half {
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
 }
-.cross-container:focus{
-  outline: none;
-  
-  
-}
+
 .container-order-form {
   display: flex;
   flex-direction: column;
@@ -696,7 +720,7 @@ footer .logo-seconf-half {
 }
 
 .customer-name:hover ~ .form-label,
-.customer-name:focus ~ .form-label{
+.customer-name:focus ~ .form-label {
   color: var(--accent-text-color);
   top: -16px;
   left: 16px;
@@ -717,7 +741,7 @@ footer .logo-seconf-half {
   cursor: pointer;
 }
 .customer-tel:hover ~ .tel-label,
-.customer-tel:focus ~ .tel-label{
+.customer-tel:focus ~ .tel-label {
   color: var(--accent-text-color);
   top: -16px;
   left: 16px;
@@ -739,7 +763,7 @@ footer .logo-seconf-half {
 }
 
 .customer-mail:hover ~ .mail-label,
-.customer-mail:focus ~ .mail-label{
+.customer-mail:focus ~ .mail-label {
   color: var(--accent-text-color);
   top: -16px;
   left: 16px;
@@ -770,6 +794,8 @@ footer .logo-seconf-half {
   line-height: 1.14;
   letter-spacing: 0.01em;
   color: #757575;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .name-icon,
 .tel-icon,
@@ -780,9 +806,7 @@ footer .logo-seconf-half {
   left: 16px;
 }
 
-
 .form-comments {
-  margin-bottom: 20px;
   padding: 12px 16px;
   height: 120px;
   min-width: 448px;
@@ -792,7 +816,7 @@ footer .logo-seconf-half {
 }
 
 .form-comments:focus ~ .comments-label,
-.form-comments:hover ~ .comments-label{
+.form-comments:hover ~ .comments-label {
   color: var(--accent-text-color);
   top: -16px;
   left: 16px;
@@ -804,7 +828,7 @@ footer .logo-seconf-half {
 }
 
 .form-comments:focus,
-.customer-tel:hover {
+.form-comments:hover {
   border-color: var(--accent-text-color);
   outline: none;
   cursor: pointer;
@@ -812,6 +836,7 @@ footer .logo-seconf-half {
 
 .comments-container {
   position: relative;
+  margin-bottom: 20px;
 }
 .comments-label {
   position: absolute;
@@ -821,14 +846,45 @@ footer .logo-seconf-half {
   line-height: 1.14;
   letter-spacing: 0.01em;
   color: #757575;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.comm .policy-agreement {
+.policy-input {
+  appearance: none;
+  position: absolute;
+}
+.policy-checkbox {
+  position: absolute;
+
+  left: 54px;
+  width: 16px;
+  height: 15px;
+  background-color: var(--secondary-text-color);
+  background-image: url(../images/personal-data/check-box1.svg);
+}
+.policy-input:checked ~ .policy-checkbox {
+  background-image: url(../images/personal-data/check-box2.svg);
+}
+
+.policy-agreement {
   margin-bottom: 30px;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
-.agreement-conditions {
+.policy-label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: 9px;
+  margin-right: 9px;
+}
+.agreement-conditions-text {
+  margin-left: 28px;
+}
+.agreement-conditions-link {
+  display: inline-block;
   text-decoration: underline;
 }
 .button-submit {
@@ -841,6 +897,8 @@ footer .logo-seconf-half {
   border: transparent;
   background-color: var(--accent-text-color);
   padding: 10px 55px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-submit:hover {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
