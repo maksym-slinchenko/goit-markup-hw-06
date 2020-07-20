@@ -719,7 +719,6 @@ footer .logo-seconf-half {
   border-radius: 4px;
 }
 
-.customer-name:hover ~ .form-label,
 .customer-name:focus ~ .form-label {
   color: var(--accent-text-color);
   top: -16px;
@@ -730,17 +729,14 @@ footer .logo-seconf-half {
   top: -16px;
   left: 16px;
 }
-.customer-name:hover ~ .name-icon,
 .customer-name:focus ~ .name-icon {
   fill: var(--accent-text-color);
 }
-.customer-name:focus,
-.customer-name:hover {
+.customer-name:focus {
   border-color: var(--accent-text-color);
   outline: none;
   cursor: pointer;
 }
-.customer-tel:hover ~ .tel-label,
 .customer-tel:focus ~ .tel-label {
   color: var(--accent-text-color);
   top: -16px;
@@ -751,18 +747,15 @@ footer .logo-seconf-half {
   top: -16px;
   left: 16px;
 }
-.customer-tel:hover ~ .tel-icon,
 .customer-tel:focus ~ .tel-icon {
   fill: var(--accent-text-color);
 }
-.customer-tel:focus,
-.customer-tel:hover {
+.customer-tel:focus {
   border-color: var(--accent-text-color);
   outline: none;
   cursor: pointer;
 }
 
-.customer-mail:hover ~ .mail-label,
 .customer-mail:focus ~ .mail-label {
   color: var(--accent-text-color);
   top: -16px;
@@ -773,12 +766,11 @@ footer .logo-seconf-half {
   top: -16px;
   left: 16px;
 }
-.customer-mail:hover ~ .mail-icon,
+
 .customer-mail:focus ~ .mail-icon {
   fill: var(--accent-text-color);
 }
-.customer-mail:focus,
-.customer-mail:hover {
+.customer-mail:focus {
   border-color: var(--accent-text-color);
   outline: none;
   cursor: pointer;
@@ -815,8 +807,7 @@ footer .logo-seconf-half {
   border-radius: 4px;
 }
 
-.form-comments:focus ~ .comments-label,
-.form-comments:hover ~ .comments-label {
+.form-comments:focus ~ .comments-label {
   color: var(--accent-text-color);
   top: -16px;
   left: 16px;
@@ -827,8 +818,7 @@ footer .logo-seconf-half {
   left: 16px;
 }
 
-.form-comments:focus,
-.form-comments:hover {
+.form-comments:focus {
   border-color: var(--accent-text-color);
   outline: none;
   cursor: pointer;
